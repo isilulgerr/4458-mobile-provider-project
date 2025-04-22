@@ -15,6 +15,7 @@ def pay_bill_logic(subscriber_no, month):
     total = 0
     if phone_minutes > 1000:
         total += ((phone_minutes - 1000) // 1000) * 10
+
     if internet_mb > 0:
         total += 50
         if internet_mb > 20000:
@@ -51,8 +52,7 @@ def calculate_total_bill(subscriber_no, month):
     if internet_mb > 0:
         total += 50
         if internet_mb > 20000:
-            extra_mb = internet_mb - 20000
-            total += (extra_mb // 10000) * 10
+            total += ((internet_mb - 20000) // 10000) * 10
 
     return {
         "total": total,
