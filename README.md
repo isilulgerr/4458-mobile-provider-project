@@ -129,6 +129,12 @@ flask --app main run
 
 ---
 
+## 🗃️ Data Model (ER Diagram)
+
+![alt text](Untitled.png)
+
+---
+
 ## 🚀 Deployment on Render
 - Add environment variables from `.env`
 - Use `gunicorn main:app` as start command
