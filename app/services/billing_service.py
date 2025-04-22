@@ -38,6 +38,7 @@ def pay_bill_logic(subscriber_no, month):
 
     return jsonify({"message": "Bill paid successfully", "total": total}), 200
 
+
 def calculate_total_bill(subscriber_no, month):
     usages = Usage.query.filter_by(subscriber_no=subscriber_no, month=month).all()
     phone_minutes = sum(u.amount for u in usages if u.type == "phone") * 10
@@ -58,5 +59,4 @@ def calculate_total_bill(subscriber_no, month):
         "total": total,
         "phone_minutes": phone_minutes,
         "internet_mb": internet_mb
-    }
-
+    }, 200 
