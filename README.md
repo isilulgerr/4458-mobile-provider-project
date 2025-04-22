@@ -27,9 +27,11 @@ This is a RESTful API project built with **Flask**, simulating a mobile provider
 ---
 
 ## 🌐 Deployed Link
+Swagger URL
 > [https://four458-mobile-provider-project.onrender.com/apidocs](https://four458-mobile-provider-project.onrender.com/apidocs)
 
-You can test all endpoints directly from this Swagger interface.
+Base URL
+> [https://four458-mobile-provider-project.onrender.com](https://four458-mobile-provider-project.onrender.com)
 
 ---
 
