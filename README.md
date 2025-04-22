@@ -134,6 +134,19 @@ flask --app main run
 ![alt text](Untitled.png)
 
 ---
+## 🧠 Assumptions & Challenges
+
+### Assumptions
+- 1 usage unit of "phone" = 10 minutes, "internet" = 1 MB
+- 1000 phone mins free/month, then 10$ per extra 1000 mins
+- 20 GB internet flat rate = 50$, +10$ per additional 10 GB
+
+### Issues Faced
+- Gunicorn configuration for Render needed exact startup string
+- Passwords needed hashing, JWTs required header setup
+- Environment variables setup critical during deploy
+
+---
 
 ## 🚀 Deployment on Render
 - Add environment variables from `.env`
