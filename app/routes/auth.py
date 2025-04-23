@@ -16,6 +16,7 @@ auth_bp = Blueprint("auth", __name__)
             'type': 'object',
             'properties': {
                 'subscriber_no': {'type': 'string'},
+                'name': {'type': 'string'},
                 'password': {'type': 'string'}
             },
             'required': ['subscriber_no', 'password']
