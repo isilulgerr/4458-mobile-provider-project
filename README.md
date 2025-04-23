@@ -166,4 +166,4 @@ flask --app main run
 ---
 
 ## 🎥 Demo Video Link
-- .
+- https://drive.google.com/drive/folders/1OpT9AsDMv53ZrzgLf20S2REU5OemSpiU?usp=drive_link
