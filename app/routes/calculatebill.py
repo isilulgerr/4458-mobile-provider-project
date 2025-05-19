@@ -36,5 +36,7 @@ def calculate_bill():
         return jsonify({"error": "Month is required"}), 400
 
     subscriber_no = get_jwt_identity()
+    print("Incoming JSON:", request.get_json())
+    print("JWT Header:", request.headers.get("Authorization"))
     response, status = calculate_total_bill(subscriber_no, month)
     return jsonify(response), status
