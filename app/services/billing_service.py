@@ -7,6 +7,7 @@ def pay_bill_logic(subscriber_no, month):
     bill = Bill.query.filter_by(subscriber_no=subscriber_no, month=month).first()
     usages = Usage.query.filter_by(subscriber_no=subscriber_no, month=month).all()
     print("🔎 usage exists?", usages)
+    print("💰 bill exists?", bill)
     if not usages:
         return {"error": "No usage found for this month"}, 400
 
