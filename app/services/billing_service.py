@@ -6,7 +6,7 @@ from datetime import datetime
 def pay_bill_logic(subscriber_no, month):
     subscriber_no = int(subscriber_no)  # güvenli tip dönüşümü
     bill = Bill.query.filter_by(subscriber_no=subscriber_no, month=month).first()
-    usages = Usage.query.filter(Usage.month.like(f"{month}%"), Usage.subscriber_no == subscriber_no).all()
+    usages = Usage.query.filter_by(subscriber_no=subscriber_no, month=month).all()
     print("🔎 usage exists?", usages)
     print("💰 bill exists?", bill)
     if not usages:
