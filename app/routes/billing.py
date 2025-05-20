@@ -36,6 +36,8 @@ def pay_bill():
     subscriber_no = data.get("subscriber_no")
     month = data.get("month")
     response, status = pay_bill_logic(subscriber_no, month)
+    print("🧾 pay_bill çağrıldı:", data)
+
     return jsonify(response), status
 
 @billing_bp.route("/bill", methods=["GET"])

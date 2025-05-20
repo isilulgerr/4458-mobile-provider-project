@@ -6,6 +6,7 @@ from datetime import datetime
 def pay_bill_logic(subscriber_no, month):
     bill = Bill.query.filter_by(subscriber_no=subscriber_no, month=month).first()
     usages = Usage.query.filter_by(subscriber_no=subscriber_no, month=month).all()
+    print("🔎 usage exists?", usages)
     if not usages:
         return {"error": "No usage found for this month"}, 400
 
@@ -35,6 +36,7 @@ def pay_bill_logic(subscriber_no, month):
     new_bill = Bill(subscriber_no=subscriber_no, month=month, total=total, paid_at=now)
     db.session.add(new_bill)
     db.session.commit()
+    
 
     return {"message": "Bill paid successfully", "total": total}, 200
 
